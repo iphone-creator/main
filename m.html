@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Video Fullscreen Example</title>
+  <title>iOS Video Fullscreen</title>
   <style>
     body {
       display: flex;
@@ -11,35 +11,50 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background: #111;
+      background: #000;
     }
-    video {
+    #myVideo {
       width: 90%;
-      max-width: 600px;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.7);
+    }
+    #fsBtn {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 12px 20px;
+      border: none;
       border-radius: 8px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+      background: #fff;
+      font-size: 16px;
       cursor: pointer;
     }
   </style>
 </head>
 <body>
 
-  <video id="myVideo" controls playsinline>
+  <!-- Video -->
+  <video id="myVideo" playsinline controls>
     <source src="sample.mp4" type="video/mp4">
     आपका ब्राउज़र वीडियो सपोर्ट नहीं करता।
   </video>
 
+  <!-- Fullscreen Button -->
+  <button id="fsBtn">Go Fullscreen</button>
+
   <script>
     const video = document.getElementById("myVideo");
+    const btn = document.getElementById("fsBtn");
 
-    video.addEventListener("click", () => {
-      // Desktop browsers
+    btn.addEventListener("click", () => {
       if (video.requestFullscreen) {
-        video.requestFullscreen();
-      } 
-      // Safari on iOS
-      else if (video.webkitEnterFullscreen) {
-        video.webkitEnterFullscreen();
+        video.requestFullscreen();        // Desktop browsers
+      } else if (video.webkitEnterFullscreen) {
+        video.webkitEnterFullscreen();    // iOS Safari
+      } else {
+        alert("Fullscreen not supported");
       }
     });
   </script>
