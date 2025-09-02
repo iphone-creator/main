@@ -30,6 +30,14 @@
       font-size: 24px;
     }
   </style>
+  <script>
+window.addEventListener("load", function() {
+  setTimeout(() => {
+    window.scrollTo(0, 1); // हल्का scroll, जिससे Safari का bottom bar hide हो जाता है
+  }, 100);
+});
+</script>
+
 </head>
 <body>
   <div id="wrap" class="page-wrap">
