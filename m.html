@@ -3,73 +3,46 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>iOS Fullscreen Toggle</title>
+  <title>Video Fullscreen Example</title>
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: sans-serif;
-    }
-
-    #main {
+    body {
       display: flex;
-      align-items: center;
       justify-content: center;
-      height: 100%;
-      background: #f3f4f6;
-    }
-
-    #overlay {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: white;
-      display: none;        /* default hidden */
       align-items: center;
-      justify-content: center;
-      z-index: 9999;
+      height: 100vh;
+      margin: 0;
+      background: #111;
     }
-
-    button {
-      padding: 12px 20px;
-      font-size: 16px;
+    video {
+      width: 90%;
+      max-width: 600px;
       border-radius: 8px;
-      border: 1px solid #666;
-      background: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
       cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <div id="main">
-    <button id="toggleBtn">Enter Fullscreen</button>
-  </div>
 
-  <div id="overlay">
-    <button id="toggleBtn2">Exit Fullscreen</button>
-  </div>
+  <video id="myVideo" controls playsinline>
+    <source src="sample.mp4" type="video/mp4">
+    आपका ब्राउज़र वीडियो सपोर्ट नहीं करता।
+  </video>
 
   <script>
-    const overlay = document.getElementById("overlay");
-    const toggleBtn = document.getElementById("toggleBtn");
-    const toggleBtn2 = document.getElementById("toggleBtn2");
+    const video = document.getElementById("myVideo");
 
-    let isFull = false;
-
-    function toggleFullscreen() {
-      if (!isFull) {
-        overlay.style.display = "flex";   // show fake fullscreen
-        toggleBtn.textContent = "Exit Fullscreen";
-        isFull = true;
-      } else {
-        overlay.style.display = "none";   // back to normal
-        toggleBtn.textContent = "Enter Fullscreen";
-        isFull = false;
+    video.addEventListener("click", () => {
+      // Desktop browsers
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } 
+      // Safari on iOS
+      else if (video.webkitEnterFullscreen) {
+        video.webkitEnterFullscreen();
       }
-    }
-
-    toggleBtn.addEventListener("click", toggleFullscreen);
-    toggleBtn2.addEventListener("click", toggleFullscreen);
+    });
   </script>
+
 </body>
 </html>
