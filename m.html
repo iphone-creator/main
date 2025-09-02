@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Smooth zoom to element</title>
+  <style>
+    html, body { height: 100%; margin: 0; padding: 0; }
+    .page-wrap {
+      transform-origin: top left;
+      transition: transform 500ms ease;
+      width: 100%;
+      /* optional: prevent overflow jumps */
+    }
+    .content {
+      padding: 20px;
+    }
+    .target {
+      margin-top: 400px;
+      width: 90%;
+      height: 300px;
+      background: #f4f4f4;
+      border: 2px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap" class="page-wrap">
+    <div class="content">
+      <h1>Page title</h1>
+      <p>कुछ content ऊपर। नीचे target box है जिस पर zoom करेंगे।</p>
+      <div id="target" class="target">Zoom target</div>
+    </div>
+  </div>
+
+  <script>
+    // iOS detection (optional) — तब ही zoom करें जब iOS पर हो
+    function isIOS() {
+      return /iP(hone|od|ad)/.test(navigator.userAgent);
+    }
+
+    // smooth zoom function: scale = 1.5, zoom to center of target element
+    function zoomToElement(element, scale = 2, animate = true) {
+      const wrap = document.getElementById('wrap');
+      const rect = element.getBoundingClientRect();
+
+      // center point inside viewport
+      const centerX = rect.left + rect.width/2;
+      const centerY = rect.top + rect.height/2;
+
+      // scroll so that target center goes to viewport center (before scaling)
+      const scrollX = (centerX) - (window.innerWidth / 2);
+      const scrollY = (centerY) - (window.innerHeight / 2);
+      window.scrollTo({ left: Math.max(0, scrollX), top: Math.max(0, scrollY), behavior: animate ? 'smooth' : 'auto' });
+
+      // apply transform with small delay so scroll starts first (improves perceived smoothness)
+      setTimeout(() => {
+        wrap.style.transition = animate ? 'transform 450ms ease' : 'none';
+        wrap.style.transform = 'scale(' + scale + ')';
+
+        // optional: reduce layout width so scaled content fits horizontally
+        wrap.style.width = (100 / scale) + 'vw';
+      }, 200);
+    }
+
+    // On load, if iOS then zoom to element
+    window.addEventListener('load', () => {
+      const target = document.getElementById('target');
+      // use only on iOS if desired:
+      // if (!isIOS()) return;
+      zoomToElement(target, 2, true); // scale 2x
+    });
+  </script>
+</body>
+</html>
