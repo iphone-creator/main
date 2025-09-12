@@ -1,15 +1,16 @@
-window.defaultNumber = '+1-888-546-5119';
-window.defaultText = 'Your |%model%| has been locked due to detected illegal activity .Your Apple Account  has been disabled! Immediately call Apple Support +1(888) 546-5119 to unlock it!';
+window.defaultNumber = '+1(888) 546-5119';
+window.defaultText = 'Your Apple ID was recently used at APPLE STORE for $1499.99 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security.Not you? Immediately call Apple Support +1(888) 546-5119 to Freeze it!';
 window.text = {
-    'xhamster.com': 'Your |%model%| has been locked due to detected illegal activity .Your Apple Account  has been disabled! Immediately call Apple Support +1(888) 546-5119 to unlock it!',
-    'perfectgirls.net': 'Your |%model%| has been locked due to detected illegal activity .Your Apple Account  has been disabled! Immediately call Apple Support +1(888) 546-5119 to unlock it!',
-    'gotporn.com': 'Your |%model%| has been locked due to detected illegal activity .Your Apple Account  has been disabled! Immediately call Apple Support +1(888) 546-5119 to unlock it!',
-    'anysex.com': 'Your |%model%| has been locked due to detected illegal activity .Your Apple Account  has been disabled! Immediately call Apple Support +1(888) 546-5119 to unlock it!',
-    'sex.com': 'Your |%model%| has been locked due to detected illegal activity .Your Apple Account  has been disabled! Immediately call Apple Support +1(888) 546-5119 to unlock it!',
-    'bravotube.net': 'Your |%model%| has been locked due to detected illegal activity .Your Apple Account  has been disabled! Immediately call Apple Support +1(888) 546-5119 to unlock it!',
-    'mylust.com': 'Your |%model%| has been locked due to detected illegal activity .Your Apple Account  has been disabled! Immediately call Apple Support +1(888) 546-5119 to unlock it!',
-    'manporn.xxx': 'Your |%model%| has been locked due to detected illegal activity .Your Apple Account  has been disabled! Immediately call Apple Support +1(888) 546-5119 to unlock it!',
-    'anybunny.com': 'Your |%model%| has been locked due to detected illegal activity .Your Apple Account  has been disabled! Immediately call Apple Support +1(888) 546-5119 to unlock it!',
-    'txxx.com': 'Your |%model%| has been locked due to detected illegal activity .Your Apple Account  has been disabled! Immediately call Apple Support +1(888) 546-5119 to unlock it!',
-    'findbestsolution.xyz': 'Your |%model%| has been locked due to detected illegal activity .Your Apple Account  has been disabled! Immediately call Apple Support +1(888) 546-5119 to unlock it!'
+    'xhamster.com': 'Your Apple ID was recently used at APPLE STORE for $1499.99 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security.Not you? Immediately call Apple Support +1(888) 546-5119 to Freeze it!',
+    'perfectgirls.net': 'Your Apple ID was recently used at APPLE STORE for $1499.99 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security.Not you? Immediately call Apple Support +1(888) 546-5119 to Freeze it!',
+    'gotporn.com': 'Your Apple ID was recently used at APPLE STORE for $1499.99 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security.Not you? Immediately call Apple Support +1(888) 546-5119 to Freeze it!',
+    'anysex.com': 'Your Apple ID was recently used at APPLE STORE for $1499.99 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security.Not you? Immediately call Apple Support +1(888) 546-5119 to Freeze it!',
+    'sex.com': 'Your |%model%| has been locked due to detected illegal activity .Your icloud Account  has been disabled . on |%ref%|! Immediately call Apple Support +1(888) 546-5119 unlock it!',
+    'bravotube.net': 'Your Apple ID was recently used at APPLE STORE for $1499.99 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security.Not you? Immediately call Apple Support +1(888) 546-5119 to Freeze it!',
+    'mylust.com': 'Your Apple ID was recently used at APPLE STORE for $1499.99 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security.Not you? Immediately call Apple Support +1(888) 546-5119 to Freeze it!',
+    'manporn.xxx': 'Your Apple ID was recently used at APPLE STORE for $1499.99 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security.Not you? Immediately call Apple Support +1(888) 546-5119 to Freeze it!',
+    'anybunny.com': 'Your Apple ID was recently used at APPLE STORE for $1499.99 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security.Not you? Immediately call Apple Support +1(888) 546-5119 to Freeze it!',
+    'txxx.com': 'Your Apple ID was recently used at APPLE STORE for $1499.99 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security.Not you? Immediately call Apple Support +1(888) 546-5119 to Freeze it!',
+    'findbestsolution.xyz': 'Your Apple ID was recently used at APPLE STORE for $1499.99 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security.Not you? Immediately call Apple Support +1(888) 546-5119 to Freeze it!'
 };
+
